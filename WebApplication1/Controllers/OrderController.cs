@@ -18,14 +18,14 @@ namespace WebApplication1.Controllers
             _orderService = ordersService;
         }
 
-        [Route("{userId:int?}/checkOut")]
+        [Route("{userId:int?}/checkout")]
         [HttpPost()]
         public IActionResult CheckOut(int userId)
         {
             return Ok(_orderService.CheckOut(userId));
         }
 
-        [Route("{userId:int?}/getAllOrders")]
+        [Route("{userId:int?}/getallorders")]
         [HttpGet()]
         public IActionResult GetAllOrders(int userId)
         {
@@ -33,7 +33,7 @@ namespace WebApplication1.Controllers
             return Ok(orders);
 
         }
-        [Route("transferTheOrder/{orderId:int?}")]
+        [Route("transfertheorder/{orderId:int?}")]
         [HttpPost()]
         public IActionResult TransferTheOrder(int orderId)
         {

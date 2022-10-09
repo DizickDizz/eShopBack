@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
 
 
 
-        [Route("getProductList")]
+        [Route("getproductlist")]
         [HttpGet()]
         public IActionResult GetAllProducts()
         {     

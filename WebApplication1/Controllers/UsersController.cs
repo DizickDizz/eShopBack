@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
             _productService = productService;
         }
         
-        [Route("AddItem/{productId:int?}/{quantity:int?}")]
+        [Route("additem/{productId:int?}/{quantity:int?}")]
         [HttpGet]
         public IActionResult AddItem(int productId, int quantity, int userId)
         {
@@ -30,7 +30,7 @@ namespace WebApplication1.Controllers
             return Ok();
         }
         
-        [Route("removeItem/{productId:int?}")]
+        [Route("removeitem/{productId:int?}")]
         [HttpGet]
 
         public IActionResult RemoveItem(int userId, int productId)
@@ -39,7 +39,7 @@ namespace WebApplication1.Controllers
             return Ok();
         }
 
-        [Route("removeAll")]
+        [Route("removeall")]
         [HttpGet()]
 
         public IActionResult RemoveAll(int userId)
